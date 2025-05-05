@@ -1,0 +1,115 @@
+.caroussel {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    border-radius: 30px;
+    overflow: hidden;
+    max-width: 1920px;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 25%;
+    border-top-right-radius: 30px;
+    background-color: #fdfffe;
+    z-index: 1;
+    border-top-left-radius: 0px;
+    display: flex;
+    align-items: center; /* Alinha verticalmente */
+}
+
+.infoContainer {
+    background-color: #fdfffe;
+    transform: translateY(-405%);
+    z-index: 9999;
+    width: 25%;
+    height: 8%;
+    border-top-left-radius: 30px;
+    display: flex;
+    align-items: center;
+    clip-path: polygon(
+        0% 0%,        /* topo esquerdo */
+        75% 0%,       /* início da descida do triângulo */
+        100% 100%,     /* ponta inferior do triângulo */
+        100% 100%,    /* canto inferior direito */
+        0% 100%       /* canto inferior esquerdo */
+      );
+}
+
+.infoContainer p {
+    color: #482d99;
+    padding-left: 15%;
+    padding-right: 35%;
+    width: 100%;
+    font-size: clamp(0.5rem, 2.5vw, 1rem); /* reduzido */
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+}
+
+.gridDescription {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    font-family: "Montserrat", sans-serif;
+    width: 100%;
+    gap: 5%;
+}
+
+.containerDescription {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    color: #482d99;
+    border-right: rgb(226, 226, 226) solid 2px;
+}
+
+.containerDescription:first-child,
+.containerDescription:last-child {
+    border: none;
+    padding-left: 0;
+}
+
+.containerDescription p {
+    margin: 0;
+    display: flex;
+    padding-left: 14%;
+    font-size: clamp(1rem, 2.5vw, 2rem); /* antes era 2rem */
+}
+
+.containerDescription span {
+    margin: 0;
+    display: flex;
+}
+
+.descriptionNumbers {
+    font-weight: 800;
+    font-size: clamp(2rem, 5vw, 4rem); /* antes era 4rem */
+}
+
+@media (max-width:1440px) {
+
+}
+
+@media (max-width:976px) {
+    
+    .caroussel {
+        margin: 0 1rem;
+        border-radius: 15px;
+    }
+
+    .container {
+        border-top-right-radius: 15px;
+    }
+
+    .infoContainer {
+        border-top-left-radius: 15px;
+    }
+}

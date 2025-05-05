@@ -1,0 +1,30 @@
+.about{
+    display: flex;
+    justify-content: center;
+    min-height: 800px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    margin: 12vh 0;
+    color: #482d99;
+    font-weight: 800;
+    font-family: "Montserrat", sans-serif;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 2vh;
+}
+
+.containerBox{
+    display: grid;
+    background-color: white;
+    border-radius: 30px;
+    min-height: 800px;
+    padding: 2vh;
+}
